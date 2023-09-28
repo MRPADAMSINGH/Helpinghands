@@ -1,4 +1,4 @@
-{
+rs{
     "version": 2,
     "builds": [
         {
@@ -10,14 +10,14 @@
             "src": "build_files.sh",
             "use": "@vercel/static",
             "config": {
-                "distDir": "static"
+                "distDir": "users/static"
             }
         }
     ],
     "routes": [
         {
-            "src": "/static/(.*)",
-            "dest": "/static"
+            "src": "users/static/(.*)",
+            "dest": "users/static"
         },
         {
             "src": "/(.*)",
