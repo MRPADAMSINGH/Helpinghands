@@ -31,7 +31,7 @@ class UserLoginForm(AuthenticationForm):
     password = forms.CharField(widget=forms.PasswordInput(
         attrs={'class': 'form-control', 'placeholder': 'Password'}))
 
-    captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox())
+    # captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox())
 
 
 
@@ -44,4 +44,4 @@ class PasswordResetForm(PasswordResetForm):
     def __init__(self, *args, **kwargs):
         super(PasswordResetForm, self).__init__(*args, **kwargs)
 
-    captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox())
+    # captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox())
