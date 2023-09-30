@@ -3,7 +3,7 @@
     "routes": [
         {
             "src": "users/static/(.*)",
-            "dest": "/static/$1"
+            "dest": "users/static/$1"
         },
         {
             "src": "/(.*)",
