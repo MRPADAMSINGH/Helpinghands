@@ -1,19 +1,5 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "django_website/wsgi.py",
-            "use": "@vercel/python",
-            "config": { "maxi.ambdaSize": "15mb", "runtime": "python3.9" }
-        },
-        {
-            "src": "build_files.sh",
-            "use": "@vercel/static",
-            "config": {
-                "distDir": "users/static"
-            }
-        }
-    ],
+  "builds": [{ "src": "django_website/wsgi.py", "use": "@vercel/static", "config": { "maxi.ambdaSize": "15mb", "runtime": "python3.9" } }],
     "routes": [
         {
             "src": "users/static/(.*)",
@@ -23,5 +9,9 @@
             "src": "/(.*)",
             "dest": "django_website/wsgi.py"
         }
-    ]
+    ],
+  "env": {
+    "DATABASE_URL": "postgresql://postgres:X3RqyPQxlzLwwJQAoVud@containers-us-west-170.railway.app:7168/railway"
+  }
 }
+
